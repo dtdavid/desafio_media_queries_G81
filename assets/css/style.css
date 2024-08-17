@@ -1,0 +1,175 @@
+* {margin: 0; padding: 0;}
+*, *::before, *::after {box-sizing: border-box;}
+body {min-height: 100vh; font-size: 14px; font-family: Arial, Helvetica, sans-serif;}
+p {text-wrap: pretty;}
+h1, h2, h3, h4, h5, h6 { text-wrap: balance; font-family:'Courier New', Courier, monospace;}
+:root {
+    --background-color-nav:#00569f;
+    --background-color-aside:#e1e3e2;
+    --background-color-main: #ffffff;
+    --background-color-footer: #002b6e;
+    --color-h1: white;
+    --font-size-h1: 1.4em;
+    --font-size-h2: 1.2em;
+    --font-size-h3: 1em;
+    --font-size-p: 1rem;
+}
+h1{
+    color: var(--color-h1);
+    font-size: var(--font-size-h1);
+}
+p {
+    color: white;
+    font-size: var(--font-size-p);
+}
+nav {
+    grid-area: nav;
+    background-color: var(--background-color-nav);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.titulo_left {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    height: 100%;
+    margin-left: 10px;
+}
+.titulo_right {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    height: 100%;
+}
+.texto-car {
+    color: #ffffff;
+}
+
+.hamburguer-menu {
+    color: #ffffff;
+}
+aside {
+    grid-area: aside;
+    background-color: var(--background-color-aside);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buscador_filtro {
+    color: black;
+    font-size: var(--font-size-p);
+    margin-bottom: 5px; 
+}
+.text-input {
+    width: 80%;
+    height: 50%;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 0px 5px 10px;
+    font-size: 1rem;
+    color: #242525;
+}
+main {
+    grid-area: main;
+    background-color: var(--background-color-main);
+    display: flex;
+    flex-direction: column;
+}
+.principal_cards {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.principal_card1{
+    background-image: url(../img/city-car.jpg);
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../img/city-car2.jpg");
+    border-image-source: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+    min-height: 340px;
+    width: 80%;
+    border: 1px solid #e6e6e6;
+    border-radius: 15px;
+    margin: 20px 0px 10px 0;
+    box-shadow: 1px 8px 5px #e6e6e6;
+}
+.principal_name {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    color: rgb(69, 65, 65);
+}
+.principal_btn {
+    width: calc(100px + 0.5vw);
+    background-color: #00569f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+.principal_paginacion {
+    color: var(--background-color-nav);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 5px;
+}
+.principal_paginacion span {
+    border: 1px rgb(188, 174, 174) solid;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carrusel-left {
+    border-radius: 5px 0 0 5px;
+}
+.carrusel-rigth {
+    border-radius: 0px 5px 5px 0;
+}
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.footer {
+    background-color: var(--background-color-footer);
+}
+.footer-icons {
+    display: flex;
+    flex-direction: row;
+}
+.fa-brands {
+    font-size: 1.3rem;
+    padding: 2px;
+}
+.grid_container {
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "aside"
+    "main"
+    "footer"
+    ;
+    grid-template-rows: 50px 85px auto 55px;
+    grid-template-columns: 1fr;
+    height: 100vh;
+}

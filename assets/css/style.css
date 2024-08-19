@@ -50,6 +50,9 @@ nav {
 .hamburguer-menu {
     color: #ffffff;
 }
+.titulo_list {
+    display: none;
+}
 aside {
     grid-area: aside;
     background-color: var(--background-color-aside);
@@ -85,6 +88,9 @@ main {
     justify-content: center;
     align-items: center;
     margin: 0;
+}
+.principal_card {
+    display: none;
 }
 .principal_card1{
     background-image: url(../img/city-car.jpg);
@@ -173,3 +179,99 @@ footer {
     grid-template-columns: 1fr;
     height: 100vh;
 }
+
+@media (min-width: 576px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    h1 {
+        font-size: 0.8rem;
+    }
+    .titulo_left {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: center;
+        height: 100px;
+        margin: 20px 0 0 0;
+        text-align: center;
+        width: 100%;
+    
+    }
+    
+    .titulo_right {
+        display: none;
+    }
+    .titulo_list {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        width: 100%;
+    }
+    .titulo_list ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        width: 100%;
+        align-items: center;
+    }
+    .titulo_list ul li {
+        list-style: none;
+    }
+    .titulo_icon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        justify-content: center;
+        max-width: 100vw;
+    }
+    .principal_cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+    .principal_card1, .principal_card {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../img/city-car2.jpg");
+    border-image-source: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+    min-height: 250px;
+    width: auto; 
+    border: 1px solid #e6e6e6;
+    border-radius: 15px;
+    margin: 20px 0px 10px 0;
+    box-shadow: 1px 8px 5px #e6e6e6;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    }
+    .footer_derechos {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    .grid_container {
+        grid-template-areas: 
+        "nav aside aside aside aside"
+        "nav main main main main"
+        "footer main main main main";
+        grid-template-columns: 1.5fr 2fr 2fr 2fr 2fr;
+        grid-template-rows: 85px auto 85px; 
+    }
+}
+    
